@@ -6,22 +6,16 @@
   <body>
     <h1><center>HTML 5 practice course</center></h1>
     <script>
-      document.write("Below is a sample <strong> code</strong> I am creating - ");
-      a = 6;
-      b = 7;
-      document.write(a+b);
       
-      testFunction('test message 2');
-      
-      function testFunction(message)
+      function testFunction()
       {
-      alert(message);  
+      alert("button was clicked");  
       }
       
     </script>    
     <p>HTML 5 practice course</p>
     
-    <button> click to see alert </button>
+    <button onClick="testFunction()"> click to see alert </button>
     
     </body>
 </html>
