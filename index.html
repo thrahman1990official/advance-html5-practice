@@ -4,13 +4,12 @@
     <title>Talha Rahman Sample Biography</title>
   </head>
   <body>
-    <h1><center>Talha Rahman</center></h1>
+    <h1 id="title"><center>Talha Rahman</center></h1>
     <br>
     <h2><center>Talha Rahman Biography</center></h2>
     <br>
     <p>
     <img src="talha_bicycle.png" width="200" height="300" alt="talha-bicycle" />
-    <button onClick="showDate()"> Come Celebrate Talha's Birthday </button>
     </p>
     <p>
         <br>
@@ -26,10 +25,7 @@
         field as a career and hobby, I like the fact that it has the flexibility of working both on-site and remotely, as well as opportunities being global.
         <br>
       <script>
-      function showDate()
-        {
-         alert("Birthday is every January 21st"); 
-        }
+      pageTitle=document.getElementById("title").innerHTML;
       </script>
     </p>
     </body>
