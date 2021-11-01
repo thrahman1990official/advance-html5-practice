@@ -19,11 +19,11 @@
     <h2><center>Talha Rahman Biography</center></h2>
     <br>
     <div id="targetDiv" ondragover="allowDrop(event)"></div>
-    <img id="dragItem" src="talha_bicycle.png" width="200" height="150" alt="talha-bicycle" draggable="true" ondragstart="drag(event)"/>
+    <img id="dragItem" src="talha_bicycle.png" width="200" height="150" draggable="true" ondragstart="drag(event)"/>
     <script>
       function drag(e)
       {
-       e.dataTransfer.setData("Text", e.target.id); 
+       e.dataTransfer.setData("Text",e.target.id); 
       }
       function allowDrop(e)
       {
