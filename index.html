@@ -18,8 +18,24 @@
     <br>
     <h2><center>Talha Rahman Biography</center></h2>
     <br>
-    <div id="targetDiv"></div>
-    <img id="drag item" src="talha_bicycle.png" width="200" height="300" alt="talha-bicycle" draggable="true" />
+    <div id="targetDiv" ondragover="allowDrop(event)"></div>
+    <img id="dragItem" src="talha_bicycle.png" width="200" height="300" alt="talha-bicycle" draggable="true" ondragstart="drag(event)"/>
+    <script>
+      function drag(e)
+      {
+       e.dataTransfer.setData("Text", e.target.id); 
+      }
+      function allowDrop(e)
+      {
+       e.preventDefault(); 
+      }
+      function drop(e)
+      {
+       e.preventDefault();
+        dragItem=e.dataTransfer.getData("Text");
+        e.target.appendChild(document.getElementById(dragItem));
+      }
+    </script>
     <br>
     <p>The title of this page is: <span id="insertLocation"></span></p>
     <br>
