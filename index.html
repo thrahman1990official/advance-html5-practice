@@ -30,19 +30,24 @@
       current time<span id="timeTest"></span>seconds
     </p>
     <script>
+      vid=document.getElementById("video");
       function playVideo()
       {
-       document.getElementById("video").play();
+     vid.play()
       }
       function pauseVideo()
       {
-       document.getElementById("video").pause(); 
+       vid.pause(); 
       }
       function setDuration()
       {
-       document.getElementById("totalTime").innerHTML=document.getElementById("video").duration; 
+       document.getElementById("totalTime").innerHTML=Math.round(vid.duration); 
       }
    //get the duration time for the video
+      function updateTime()
+      {
+        document.getElementById("timeText").innerHTML=Math.round(vid.currentTime);
+      }
     </script>
     <h2><center>Talha Rahman Biography</center></h2>
     <br>
