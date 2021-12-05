@@ -16,7 +16,7 @@
   <body>
     <h1 id="title"><center>Talha Rahman</center></h1>
     <br>
-    <video id="video" width=320 height=240 controls>
+    <video id="video" width=320 height=240 onloadedmetadata="setDuration()">
     <source src="https://www.youtube.com/watch?v=jSi2LDkyKmI"/>
     </video>
     <br>
@@ -36,9 +36,13 @@
       }
       function pauseVideo()
       {
-       document.getElemebtById("video").pause(); 
+       document.getElementById("video").pause(); 
       }
-    document.getElementById("totalTime").innerHTML=document.getElementById("video").duration; //get the duration time for the video
+      function setDuration()
+      {
+       document.getElementById("totalTime").innerHTML=document.getElementById("video").duration; 
+      }
+   //get the duration time for the video
     </script>
     <h2><center>Talha Rahman Biography</center></h2>
     <br>
